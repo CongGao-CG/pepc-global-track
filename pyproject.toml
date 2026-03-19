@@ -1,23 +1,45 @@
 [build-system]
-requires = ["setuptools>=64", "wheel"]
-build-backend = "setuptools.backends._legacy:_Backend"
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "pepc-global-track"
 version = "0.1.0"
+authors = [
+    { name = "Cong Gao", email = "cong.gao@princeton.edu" }
+]
 description = "Predict tropical cyclone track displacements using pre-trained Random Forest models"
 readme = "README.md"
-license = "MIT"
 requires-python = ">=3.9"
+license = { text = "MIT" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Atmospheric Science",
+]
 dependencies = [
-    "numpy",
-    "scikit-learn",
-    "joblib",
-    "huggingface-hub",
+    "numpy>=1.21",
+    "scikit-learn>=1.0",
+    "joblib>=1.1",
+    "huggingface-hub>=0.20",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=3.0",
 ]
 
 [project.urls]
-Repository = "https://github.com/CONGG/pepc-global-track"
+Homepage = "https://github.com/CongGao-CG/pepc-global-track"
+Repository = "https://github.com/CongGao-CG/pepc-global-track.git"
 
 [tool.setuptools.packages.find]
 include = ["pepc_global_track*"]
