@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "pepc-global-track"
+version = "0.1.0"
+description = "Predict tropical cyclone track displacements using pre-trained Random Forest models"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "scikit-learn",
+    "joblib",
+    "huggingface-hub",
+]
+
+[project.urls]
+Repository = "https://github.com/CONGG/pepc-global-track"
+
+[tool.setuptools.packages.find]
+include = ["pepc_global_track*"]
