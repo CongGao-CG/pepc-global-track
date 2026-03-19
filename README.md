@@ -15,10 +15,10 @@ import numpy as np
 from pepc_global_track import predict_track
 
 # 1D arrays of environmental predictors at storm locations
-u250 = np.array([5.0, 6.0, 7.0])   # 250 hPa zonal wind (m s⁻¹)
-v250 = np.array([1.0, 1.5, 2.0])   # 250 hPa meridional wind (m s⁻¹)
-u850 = np.array([3.0, 3.5, 4.0])   # 850 hPa zonal wind (m s⁻¹)
-v850 = np.array([-1.0, -0.5, 0.0]) # 850 hPa meridional wind (m s⁻¹)
+u250 = np.array([5.0, 6.0, 7.0])   # 250 hPa zonal wind (m s^−1)
+v250 = np.array([1.0, 1.5, 2.0])   # 250 hPa meridional wind (m s^−1)
+u850 = np.array([3.0, 3.5, 4.0])   # 850 hPa zonal wind (m s^−1)
+v850 = np.array([-1.0, -0.5, 0.0]) # 850 hPa meridional wind (m s^−1)
 lat  = np.array([15.0, 16.0, 17.0]) # storm latitude (degrees)
 
 # Predict longitude displacement
