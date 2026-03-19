@@ -36,7 +36,7 @@ def predict_track(
     type : str
         "lon" for zonal displacement or "lat" for meridional displacement.
     u250, v250, u850, v850 : np.ndarray
-        1D arrays of wind predictors (m/s).
+        1D arrays of wind predictors (m s⁻¹).
     lat : np.ndarray
         1D array of storm latitudes (degrees).
 
